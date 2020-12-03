@@ -24,7 +24,7 @@ class Posts extends Component {
     render() {
         return (
             <div>
-                { this.toDisplayPinned ? <h1><Post post = {this.state.pinnedPost} key = {this.state.pinnedPost.id}/> </h1> : '' }
+                { this.toDisplayPinned && <h1><Post post = {this.state.pinnedPost} key = {this.state.pinnedPost.id}/> </h1> }
                 { this.state.posts.map((post) => <Post post = {post} pin = {this.pinPost} key = {post.id}/>) }
             </div>
         );

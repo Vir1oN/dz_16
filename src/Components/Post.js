@@ -11,7 +11,11 @@ class Post extends Component {
             <div className={'postBlock'}>
                 <p>User#{post.userId}: {post.title}</p>
                 <p>{post.body}</p>
-                <button className={'pinButton'} onClick={() => pin(post.id)}>Pin</button>
+
+                {
+                    pin &&
+                    <button className={'pinButton'} onClick={() => pin(post.id)}>Pin</button>
+                }
                 <hr/>
             </div>
         );
